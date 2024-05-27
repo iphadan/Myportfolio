@@ -5,7 +5,7 @@ import os
 
 import dj_database_url
 from django.core.management.commands.runserver import Command as runserver
-runserver.default_port = '7000' 
+runserver.default_port = '8000' 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MyPortfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
