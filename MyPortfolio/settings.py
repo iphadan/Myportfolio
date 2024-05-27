@@ -17,14 +17,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-SECRET_KEY = 'django-insecure-t85ojesbszrra5=1m98sex5kx%4avpzpw#^q_^57hk0%e0itf%'
-#SECRET_KEY = os.environ.get('SECRET_KEY')
+#SECRET_KEY = 'django-insecure-t85ojesbszrra5=1m98sex5kx%4avpzpw#^q_^57hk0%e0itf%'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 #SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = os.environ.get('DEBUG','False').lower() == 'true'
-DEBUG = True
-#ALLOWED_HOSTS = ['gymrender.onrender.com','localhost','127.0.0.1']
-ALLOWED_HOSTS=['192.168.8.104','localhost','127.0.0.1']
+DEBUG = os.environ.get('DEBUG','False').lower() == 'true'
+#DEBUG = True
+ALLOWED_HOSTS = ['myportfolio-wq3k.onrender.com','localhost','127.0.0.1']
+#ALLOWED_HOSTS=['192.168.8.104','localhost','127.0.0.1']
 
 
 # Application definition
@@ -81,8 +81,8 @@ DATABASES = {
     }
 }
 
-# database_url=os.environ.get('DATABASE_URL')
-# DATABASES['default'] = dj_database_url.parse(database_url)
+database_url=os.environ.get('DATABASE_URL')
+DATABASES['default'] = dj_database_url.parse(database_url)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
